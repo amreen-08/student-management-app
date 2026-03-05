@@ -29,7 +29,7 @@ class Student(db.Model):
     phone = db.Column(db.String(20), nullable=False)
     email = db.Column(db.String(100), nullable=False)
 
-@app.before_first_request
+@app.before_request
 def create_tables():
     db.create_all()
 
